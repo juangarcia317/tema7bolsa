@@ -10,8 +10,8 @@ El programa lee históricos en CSV, entrena un modelo de regresión polinómica 
 1. Busca una página que permita la descarga de datos históricos de valores bursátiles en formato CSV, como [Stooq.com](https://stooq.com) o [Investing.com](https://es.investing.com).
 2. Descarga los valores de **TSLA, AMZN, GOOGL y NVDA** para 2025.
 3. Genera una clase `StockDataXXX` (con tus iniciales) con los atributos:
-    - `private final LocalDate date` — fecha de la sesión bursátil (ej: 2025-03-15)
-    - `private final double closePrice` — precio de cierre de la acción ese día
+    - `private LocalDate date` — fecha de la sesión bursátil (ej: 2025-03-15)
+    - `private double closePrice` — precio de cierre de la acción ese día
 4. Implementa `CsvReaderXXX` para leer los archivos y generar listas de `StockDataXXX`.
 5. Implementa `ForecastEngineXXX` para la estimación por regresión polinómica.
 6. Implementa `ChartGeneratorXXX` para la generación de gráficas con JFreeChart.
